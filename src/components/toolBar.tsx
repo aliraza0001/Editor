@@ -43,23 +43,26 @@ class toolBar extends PureComponent<{}, toolBarState> {
   render() {
     return (
       <div className="toolbar">
-        <button onClick={(e) => this.format("bold", "")}>Bold</button>
-        <button onClick={(e) => this.format("italic", "")}>Italics</button>
-        <button onClick={(e) => this.format("insertUnorderedList", "")}>
-          List
+        <button className="active" onClick={(e) => this.format("bold", "")}><i className="fas fa-bold"></i></button>
+        <button className="active" onClick={(e) => this.format("italic", "")}><i className="fas fa-italic"></i></button>
+        <button className="active" onClick={(e) => this.format("insertUnorderedList", "")}>
+          <i className="fas fa-list-ul"></i>
         </button>
-        <button onClick={(e) => this.addLink()}>Link</button>
-        <div
-          //   onMouseUpCapture={this.mosdd}
-          ref={this.inputRef}
-          className="hidden"
-        >
-          <input ref={this.txtFormatUrl} placeholder="url" />
-          <button onClick={(e) => this.setUrl(e)}>Create Link</button>
-        </div>
+        <button className="active" onClick={(e) => this.addLink()}>
+          <i className="fas fa-link"></i>
+          <div
+            //   onMouseUpCapture={this.mosdd}
+            ref={this.inputRef}
+            className="hidden link-picker"
+          >
+            <input ref={this.txtFormatUrl} placeholder="url" />
+            <button onClick={(e) => this.setUrl(e)}><i className="fas fa-plus"></i></button>
+          </div>
+        </button>
         <input
           onChange={({ target }) => this.format("foreColor", target.value)}
           type="color"
+          className="color-picker"
           ref={this.colorInputRef}
         />
       </div>

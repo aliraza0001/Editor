@@ -13,7 +13,7 @@ export default function Editor() {
         id="title"
         contentEditable="true"
         data-placeholder="Title..."
-        className="title"
+        className="page-wrapper"
         onMouseUp={onMouseUp}
       ></div>
     </React.Fragment>

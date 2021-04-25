@@ -1,29 +1,28 @@
 .editor {
-  width: 95%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 768px;
   min-height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
   font-size: 20px;
+  border: 1px solid #f5f5f5;
 }
 .editor > li {
   list-style: square;
   margin: initial;
 }
-#title {
-  width: 95%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 135px;
+.page-wrapper {
+  width: 100%;
+  padding: 0 25px;
+  padding-top: 75px;
   font-size: 40px;
+  height: calc(100vh - 105px);
 }
 .editor:focus,
-#title:focus {
+.page-wrapper:focus {
   outline: none;
 }
-#title:empty:before,
+.page-wrapper:empty:before,
 .editor:empty:before {
   content: attr(data-placeholder);
   color: gray;
