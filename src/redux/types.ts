@@ -1,0 +1,1 @@
+export const ADD_SELECTED_TEXT = "ADD_SELECTED_TEXT"

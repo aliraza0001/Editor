@@ -29,11 +29,20 @@
 .toolbar button.active {
   opacity: 1;
 }
+.hidden {
+  visibility: hidden;
+}
+.link-wrapper {
+  position: relative;
+}
 .link-picker {
   position: absolute;
   display: flex;
   left: -183px;
   top: 45px;
+}
+.link-picker p {
+ 
 }
 .link-picker input {
   height: 40px;
@@ -41,9 +50,6 @@
   border-radius: 5px;
   padding: 5px 10px;
   margin-right: 5px;
-}
-.hidden {
-  /* display: none; */
 }
 
 .color-picker {
