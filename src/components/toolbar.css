@@ -41,6 +41,7 @@
   display: flex;
   left: -183px;
   top: 45px;
+  z-index: 1111;
 }
 .link-picker p {
 }

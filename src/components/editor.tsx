@@ -1,5 +1,5 @@
 import "./editor.css";
-import { createRef, useEffect, useCallback, Fragment } from "react";
+import { useRef, useEffect, useCallback, Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSelectedText } from "../redux/Actions/editorActions";
 import { RootState } from "../redux";
@@ -15,7 +15,7 @@ const Editor = () => {
     if (selectedText !== text) dispatch(addSelectedText(text));
   }, []);
 
-  const editorRef = createRef<HTMLDivElement>();
+  const editorRef = useRef<HTMLDivElement>();
 
   useEffect(() => {
     // call event listners

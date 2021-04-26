@@ -58,6 +58,7 @@ class toolBar extends Component<toolBarProps, toolBarState> {
 
   render() {
     const { selectedText } = this.props;
+    console.log(selectedText);
     return (
       <div className="toolbar">
         <button ref={this.boldBtn} onClick={() => this.format("bold", "")}>
@@ -89,10 +90,6 @@ class toolBar extends Component<toolBarProps, toolBarState> {
           className="color-picker"
           ref={this.colorInputRef}
         />
-        <div className='selected-text'>
-          <p>Selected Text: </p>
-          <p>{selectedText}</p>
-        </div>
       </div>
     );
   }
