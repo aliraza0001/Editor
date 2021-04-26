@@ -77,10 +77,6 @@ class toolBar extends Component<toolBarProps, toolBarState> {
             <i className="fas fa-link"></i>
           </button>
           <div ref={this.inputRef} className="hidden link-picker">
-            <div>
-              <p>Selected Text</p>
-              <p>{selectedText}</p>
-            </div>
             <input ref={this.txtFormatUrl} placeholder="url" />
             <button className="active" onClick={(e) => this.setUrl(e)}>
               <i className="fas fa-plus"></i>
@@ -93,6 +89,10 @@ class toolBar extends Component<toolBarProps, toolBarState> {
           className="color-picker"
           ref={this.colorInputRef}
         />
+        <div className='selected-text'>
+          <p>Selected Text: </p>
+          <p>{selectedText}</p>
+        </div>
       </div>
     );
   }

@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 25px;
+  position: relative;
 }
 .toolbar button {
   border: none;
@@ -42,7 +43,6 @@
   top: 45px;
 }
 .link-picker p {
- 
 }
 .link-picker input {
   height: 40px;
@@ -56,4 +56,18 @@
   width: 40px;
   height: 40px;
   border-radius: 5px;
+}
+
+.selected-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 5px 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.selected-text p{
+  font-size: 14px;
+  margin-right: 10px;
 }
